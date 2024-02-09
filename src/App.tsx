@@ -1,10 +1,8 @@
-import { useSelector } from "react-redux";
-import { RootState } from "./store";
+import { router } from "components/routes/main-routes";
+import { RouterProvider } from "react-router-dom";
 
 const App = () => {
-  const value = useSelector((state: RootState) => state.user.value);
-
-  return <div>App {value}</div>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
